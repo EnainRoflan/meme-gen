@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MEME_MACHINE</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="landingScreen" class="screen active">
+        <h1>Мем-машина</h1>
+        <p>Создаёт случайные мемы и шутки в один клик.</p>
+        <button id="startBtn" class="btn primary">Start</button>
+      </section>
+
+      <section id="choiceScreen" class="screen">
+        <h2>Что хотите сгенерировать?</h2>
+        <div class="choices">
+          <button id="jokeBtn" class="btn">Анекдот</button>
+          <button id="memeBtn" class="btn">Мемасик</button>
+          <button id="secretBtn" class="btn secret">BIG RJAKA</button>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="screen">
+        <h2 id="resultTitle">Результат</h2>
+
+        <div id="memeCard" class="card hidden">
+          <h3 id="memeName"></h3>
+          <img id="memeImage" alt="Generated meme" />
+        </div>
+
+        <div id="jokeCard" class="card hidden">
+          <p id="jokeText"></p>
+        </div>
+
+        <div class="actions">
+          <button id="newBtn" class="btn primary">Ещё</button>
+          <button id="closeBtn" class="btn">Закрыть</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
