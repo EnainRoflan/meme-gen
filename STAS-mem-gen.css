@@ -29,6 +29,18 @@ p{
     color: white;
 }   
 
+.choiceButton{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c2b6b0;
+    color: #74483d;
+    border-radius: 32px;
+    height: 2em;
+    width: 10em;
+    margin-top:4em;
+    cursor: pointer}
+
 .startButton{
     display: flex;
     justify-content: center;
