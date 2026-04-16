@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='UTF-8'>
+    <title>MemeGen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='face' id="screenStart">
+        <div class="plate">
+            <h1>Генератор случайного мема</h1>
+            <p>Для любой ситуации и в любое время</p>
+            <div class="startButton" id="btnStart">Генерировать</div>
+        </div>
+    </div>
+    
+    <div class="memMenu hidden" id="screenMenu">
+        <div class="text">Выбери тему для генерации: </div>
+        <div class="choiceMenu">    
+            <div class="choiceButton" data-category="meme">Меме</div>
+            <div class="choiceButton" data-category="other">чё-нидь ещё</div>
+            <div class="choiceButton" data-category="radon">Радон</div>
+            <div class="choiceButton" data-category="kitty">kitty</div>
+        </div>
+    </div>
+
+    <div class="result hidden" id="screenResult">
+    <div class="picturePlace">
+        <img src="" id="memeImage" alt="Meme" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
+        <p id="memeText">Некая информация о картинке</p>
+        <div class="close">
+            <div class="coolBtn" onclick="location.reload()">Клёва (Заново)</div>
+            <div class="coolBtn" onclick="location.reload()">Мем кака</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
