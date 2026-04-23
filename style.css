@@ -9,6 +9,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: sans-serif;
+    text-shadow: 0px 0px 5px #74483d
 }
 
 a {
@@ -47,6 +48,13 @@ h1, p { color: #ffe6d8; text-align: center; }
     width: 12em;
     cursor: pointer;
     transition: transform 0.2s;
+    box-shadow: 0px 0px 5px 1px #74483d; 
+    
+}
+
+::selection {
+    background-color: #ffb7b7;
+    color: #000000;           
 }
 
 .startButton { margin-top: 2em; }
@@ -54,6 +62,10 @@ h1, p { color: #ffe6d8; text-align: center; }
 
 .startButton:hover, .choiceButton:hover, .coolBtn:hover {
     transform: scale(1.05);
+}
+
+.startButton:active, .choiceButton:active, .coolBtn:active {
+    transform: scale(0.97);
 }
 
 /* Меню выбора */
@@ -115,4 +127,12 @@ h1, p { color: #ffe6d8; text-align: center; }
     width: 100%;
     margin-top: auto;
     padding-bottom: 20px;
+}
+
+#badone:hover{
+    background-color: #c6a0a0;
+}
+
+#goodone:hover{
+    background-color: #abc4a5;
 }
