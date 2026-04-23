@@ -1,47 +1,41 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEME_MACHINE</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="app">
-      <section id="landingScreen" class="screen active">
-        <h1>Мем-машина</h1>
-        <p>Создаёт случайные мемы и шутки в один клик.</p>
-        <button id="startBtn" class="btn primary">Start</button>
-      </section>
-
-      <section id="choiceScreen" class="screen">
-        <h2>Что хотите сгенерировать?</h2>
-        <div class="choices">
-          <button id="jokeBtn" class="btn">Анекдот</button>
-          <button id="memeBtn" class="btn">Мемасик</button>
-          <button id="secretBtn" class="btn secret">BIG RJAKA</button>
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='UTF-8'>
+    <title>MemeGen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='face' id="screenStart">
+        <div class="plate">
+            <h1>Генератор случайного мема</h1>
+            <p>Для любой ситуации и в любое время</p>
+            <div class="startButton" id="btnStart">Генерировать</div>
         </div>
-      </section>
-
-      <section id="resultScreen" class="screen">
-        <h2 id="resultTitle">Результат</h2>
-
-        <div id="memeCard" class="card hidden">
-          <h3 id="memeName"></h3>
-          <img id="memeImage" alt="Generated meme" />
+    </div>
+    
+    <div class="memMenu hidden" id="screenMenu">
+        <div class="text">Выбери тему для генерации: </div>
+        <div class="choiceMenu">    
+            <div class="choiceButton" data-category="meme">Меме</div>
+            <div class="choiceButton" data-category="other">чё-нидь ещё</div>
+            <div class="choiceButton" data-category="radon">Радон</div>
+            <div class="choiceButton" data-category="kitty"><a href="https://web.archive.org/web/20230717204942/https://pnrtscr.com/fep8be">don't click!!!!</a>
+            </div>
         </div>
+    </div>
 
-        <div id="jokeCard" class="card hidden">
-          <p id="jokeText"></p>
+    <div class="result hidden" id="screenResult">
+    <div class="picturePlace">
+        <img src="" id="memeImage" alt="Meme" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+    </div>
+        <p id="memeText">Некая информация о картинке</p>
+        <div class="close">
+            <div class="coolBtn" onclick="location.reload()">Клёва (Заново)</div>
+            <div class="coolBtn" onclick="location.reload()">Мем кака</div>
         </div>
-
-        <div class="actions">
-          <button id="newBtn" class="btn primary">Ещё</button>
-          <button id="closeBtn" class="btn">Закрыть</button>
-        </div>
-      </section>
-    </main>
+    </div>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
