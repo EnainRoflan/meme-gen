@@ -6,7 +6,8 @@ const memeLibrary = {
         { path: "meme/bomba2.jfif", text: "ааа наоборот" }
     ],
     other: [
-        { path: "meme/shakal.jfif", text: "Вас тоже бесят фейк пнг в гугле?" }
+        { path: "meme/shakal.jfif", text: "Вас тоже бесят фейк пнг в гугле?" },
+        { path: "meme/bigbang.jpg", text: "Орешки biiiigbob" }
     ],
     radon: [
         { path: "meme/radon.jpg", text: "Радон санаторий" }
