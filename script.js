@@ -1,20 +1,16 @@
-// База данных ссылок (замени на свои)
 const memeLibrary = {
     meme: [
-        "meme/pahom.jpg",
-        "meme/64.jpg",
-        "meme/bomba.webp",
-        "meme/bomba2.jfif"
+        { path: "meme/pahom.jpg", text: "Вот в деревнях-то было всё!" },
+        { path: "meme/64.jpg", text: "шесть семь" },
+        { path: "meme/bomba.webp", text: "Кхе-кхе ааааа кхе-кхе" },
+        { path: "meme/bomba2.jfif", text: "ааа наоборот" }
     ],
     other: [
-        "meme/shakal.jfif",
+        { path: "meme/shakal.jfif", text: "Вас тоже бесят фейк пнг в гугле?" }
     ],
     radon: [
-        "meme/radon.jpg",
-    ],
-    // kitty: [
-
-    // ]
+        { path: "meme/radon.jpg", text: "Радон санаторий" }
+    ]
 };
 
 const btnStart = document.getElementById('btnStart');
@@ -23,6 +19,7 @@ const screenMenu = document.getElementById('screenMenu');
 const screenResult = document.getElementById('screenResult');
 const memeImage = document.getElementById('memeImage');
 const memeText = document.getElementById("memeText");
+
 const choiceButtons = document.querySelectorAll('.choiceButton');
 
 btnStart.addEventListener('click', () => {
@@ -37,15 +34,13 @@ choiceButtons.forEach(button => {
         if (category === 'меме') category = 'meme';
         if (category === 'чё-нидь ещё') category = 'other';
         if (category === 'радон') category = 'radon';
-        //if (category === 'kitty') category = 'kitty';
-
 
         const sourceList = memeLibrary[category] || memeLibrary.meme;
+        const randomMeme = sourceList[Math.floor(Math.random() * sourceList.length)];
         
-        const randomImage = sourceList[Math.floor(Math.random() * sourceList.length)];
-        
-        memeImage.src = randomImage;
-        memeText.innerText = "прорпаорпкргоекр";
+        memeImage.src = randomMeme.path;
+        memeText.innerText = randomMeme.text;
+
         screenMenu.classList.add('hidden');
         screenResult.classList.remove('hidden');
     });
