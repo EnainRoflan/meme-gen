@@ -130,9 +130,13 @@ h1, p { color: #ffe6d8; text-align: center; }
 }
 
 #badone:hover{
-    background-color: #c6a0a0;
+    background-color: #ca9696;
 }
 
 #goodone:hover{
     background-color: #abc4a5;
+}
+
+#stop:hover{
+    background-color: #cccccc;
 }
