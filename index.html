@@ -27,16 +27,19 @@
     </div>
 
     <div class="result hidden" id="screenResult">
-    <div class="picturePlace">
-        <img src="" id="memeImage" alt="Meme" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-    </div>
+        <div class="picturePlace">
+            <img src="" id="memeImage" alt="Meme" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
         <p id="memeText">Некая информация о картинке</p>
+        
         <div class="close">
-            <div class="coolBtn" onclick="location.reload()">Клёва (Заново)</div>
-            <div class="coolBtn" onclick="location.reload()">Мем кака</div>
+            <div class="coolBtn" id="btnNextSame">Клёва</div>
+            
+            <div class="coolBtn" id="btnNextRandom">Мем кака</div>
+            
+            <div class="coolBtn" id="btnHome" style="background: #555; margin-top: 10px;">Я усталь</div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
